@@ -1,46 +1,27 @@
----
-home: true
-heroImage: /hero.png
-actionText: Get Started →
-actionLink: /guide/
-footer: MIT Licensed | Copyright © 2018-present Evan You
----
+# 不吃韭菜
 
-<div style="text-align: center">
-  <Bit/>
-</div>
+https://github.com/MIA503
 
-<div class="features">
-  <div class="feature">
-    <h2>Simplicity First</h2>
-    <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
-  </div>
-  <div class="feature">
-    <h2>Vue-Powered</h2>
-    <p>Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.</p>
-  </div>
-  <div class="feature">
-    <h2>Performant</h2>
-    <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
-  </div>
-</div>
+## 日常笔记
 
-### As Easy as 1, 2, 3
+**Python**
 
-``` bash
-# install
-yarn global add vuepress # OR npm install -g vuepress
+* [Table of Contents](https://vuepress.vuejs.org/guide/markdown.html#table-of-contents)
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
+**Go**
 
-# start writing
-vuepress dev
+* [Templating](https://vuepress.vuejs.org/guide/using-vue.html#templating)
+* [Using Components](https://vuepress.vuejs.org/guide/using-vue.html#using-components)
 
-# build to static files
-vuepress build
-```
+**Mysql**
 
-::: warning COMPATIBILITY NOTE
-VuePress requires Node.js >= 8.
-:::
+* [Metadata](https://vuepress.vuejs.org/guide/custom-themes.html#site-and-page-metadata)
+* [Content Excerpt](https://vuepress.vuejs.org/guide/custom-themes.html#content-excerpt)
+
+**Mq**
+
+* [RabbitMq](https://vuepress.vuejs.org/default-theme-config/#homepage)
+* [Simple out-of-the-box header-based search](https://vuepress.vuejs.org/default-theme-config/#built-in-search)
+* [Algolia Search](https://vuepress.vuejs.org/default-theme-config/#algolia-search)
+
+## 日常吐槽
