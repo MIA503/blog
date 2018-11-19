@@ -3,17 +3,12 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
+      title: '不吃韭菜',
+      description: '随便写写'
     }
   },
   head: [
-    ['link', { rel: 'icon', href: `/logo.png` }],
+    ['link', { rel: 'icon', href: `/profile.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -24,54 +19,9 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   serviceWorker: true,
-  theme: 'vue',
   themeConfig: {
-    repo: 'vuejs/vuepress',
-    editLinks: true,
-    docsDir: 'docs',
-    // #697 Provided by the official algolia team.
-    algolia: {
-      apiKey: '3a539aab83105f01761a137c61004d85',
-      indexName: 'vuepress'
-    },
     locales: {
       '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        serviceWorker: {
-          updatePopup: {
-            message: "New content is available.",
-            buttonText: "Refresh"
-          }
-        },
-        nav: [
-          {
-            text: 'Guide',
-            link: '/guide/',
-          },
-          {
-            text: 'Config Reference',
-            link: '/config/'
-          },
-          {
-            text: 'Default Theme Config',
-            link: '/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-          }
-        ],
-        sidebar: {
-          '/guide/': genSidebarConfig('Guide')
-        }
-      },
-      '/zh/': {
-        label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
         serviceWorker: {
           updatePopup: {
@@ -81,46 +31,70 @@ module.exports = {
         },
         nav: [
           {
-            text: '指南',
-            link: '/zh/guide/',
+            text: '学习笔记',
+            link: '/note/',
           },
           {
-            text: '配置',
-            link: '/zh/config/'
+            text: '胡言乱语',
+            link: '/balabala/',
           },
           {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
+            text: 'GitHub',
+            link: 'https://github.com/MIA503'
           }
         ],
         sidebar: {
-          '/zh/guide/': genSidebarConfig('指南')
+          '/note/': genSidebarConfig('私家菜园', 'RabbitMQ'),
+          '/balabala/': genBalaSidebarConfig('随便说说'),
         }
       }
     }
   }
 }
 
-function genSidebarConfig (title) {
+function genSidebarConfig (init, mq) {
   return [
     {
-      title,
+      title: init,
       collapsable: false,
       children: [
-        '',
-        'getting-started',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'custom-themes',
-        'i18n',
-        'deploy'
+        ''
+      ]
+    },
+    // {
+    //   title: python,
+    //   collapsable: false,
+    //   children: [
+    //     'python/',
+    //     'python/getting-started',
+    //     'python/assets',
+    //     'python/using-vue',
+    //     'python/custom-themes',
+    //     'python/deploy'
+    //   ]
+    // },
+    {
+      title: mq,
+      collapsable: false,
+      children: [
+        'rabbitmq/',
+        'rabbitmq/rabbitmq',
+        'rabbitmq/celery',
+        'rabbitmq/redis_broker'
       ]
     }
   ]
 }
+
+function genBalaSidebarConfig (bala) {
+  return [
+    {
+      title: bala,
+      collapsable: false,
+      children: [
+        ''
+      ]
+    }
+  ]
+}
+

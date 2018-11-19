@@ -1,4 +1,4 @@
-# Configuration
+# Redis Broker
 
 ## Config File
 
